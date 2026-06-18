@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Css/header.css">
+    <link rel="stylesheet" href="../Css/footer.css">
+    <link rel="stylesheet" href="../Css/play.css">
+    <link rel="stylesheet" href="../Css/loader.css">
+</head>
+
+<body>
+
+    <div id="loadingScreen">
+        <div class="loaderWrapper">
+            <div class="loader">
+              <svg
+                id="pegtopone"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <filter id="shine">
+                    <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+                  </filter>
+                  <mask id="mask">
+                    <path
+                      d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                      fill="white"
+                    ></path>
+                  </mask>
+                  <radialGradient
+                    id="gradient-1"
+                    cx="50"
+                    cy="66"
+                    fx="50"
+                    fy="66"
+                    r="30"
+                    gradientTransform="translate(0 35) scale(1 0.5)"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="black" stop-opacity="0.3"></stop>
+                    <stop offset="50%" stop-color="black" stop-opacity="0.1"></stop>
+                    <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="gradient-2"
+                    cx="55"
+                    cy="20"
+                    fx="55"
+                    fy="20"
+                    r="30"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="white" stop-opacity="0.3"></stop>
+                    <stop offset="50%" stop-color="white" stop-opacity="0.1"></stop>
+                    <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="gradient-3"
+                    cx="85"
+                    cy="50"
+                    fx="85"
+                    fy="50"
+                    xlink:href="#gradient-2"
+                  ></radialGradient>
+                  <radialGradient
+                    id="gradient-4"
+                    cx="50"
+                    cy="58"
+                    fx="50"
+                    fy="58"
+                    r="60"
+                    gradientTransform="translate(0 47) scale(1 0.2)"
+                    xlink:href="#gradient-3"
+                  ></radialGradient>
+                  <linearGradient
+                    id="gradient-5"
+                    x1="50"
+                    y1="90"
+                    x2="50"
+                    y2="10"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="black" stop-opacity="0.2"></stop>
+                    <stop offset="40%" stop-color="black" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <g>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-1)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="none"
+                    stroke="white"
+                    opacity="0.3"
+                    stroke-width="3"
+                    filter="url(#shine)"
+                    mask="url(#mask)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-2)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-3)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-4)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-5)"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                id="pegtoptwo"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <filter id="shine">
+                    <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+                  </filter>
+                  <mask id="mask">
+                    <path
+                      d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                      fill="white"
+                    ></path>
+                  </mask>
+                  <radialGradient
+                    id="gradient-1"
+                    cx="50"
+                    cy="66"
+                    fx="50"
+                    fy="66"
+                    r="30"
+                    gradientTransform="translate(0 35) scale(1 0.5)"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="black" stop-opacity="0.3"></stop>
+                    <stop offset="50%" stop-color="black" stop-opacity="0.1"></stop>
+                    <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="gradient-2"
+                    cx="55"
+                    cy="20"
+                    fx="55"
+                    fy="20"
+                    r="30"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="white" stop-opacity="0.3"></stop>
+                    <stop offset="50%" stop-color="white" stop-opacity="0.1"></stop>
+                    <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="gradient-3"
+                    cx="85"
+                    cy="50"
+                    fx="85"
+                    fy="50"
+                    xlink:href="#gradient-2"
+                  ></radialGradient>
+                  <radialGradient
+                    id="gradient-4"
+                    cx="50"
+                    cy="58"
+                    fx="50"
+                    fy="58"
+                    r="60"
+                    gradientTransform="translate(0 47) scale(1 0.2)"
+                    xlink:href="#gradient-3"
+                  ></radialGradient>
+                  <linearGradient
+                    id="gradient-5"
+                    x1="50"
+                    y1="90"
+                    x2="50"
+                    y2="10"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="black" stop-opacity="0.2"></stop>
+                    <stop offset="40%" stop-color="black" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <g>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-1)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="none"
+                    stroke="white"
+                    opacity="0.3"
+                    stroke-width="3"
+                    filter="url(#shine)"
+                    mask="url(#mask)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-2)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-3)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-4)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-5)"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                id="pegtopthree"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 100 100"
+              >
+                <defs>
+                  <filter id="shine">
+                    <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+                  </filter>
+                  <mask id="mask">
+                    <path
+                      d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                      fill="white"
+                    ></path>
+                  </mask>
+                  <radialGradient
+                    id="gradient-1"
+                    cx="50"
+                    cy="66"
+                    fx="50"
+                    fy="66"
+                    r="30"
+                    gradientTransform="translate(0 35) scale(1 0.5)"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="black" stop-opacity="0.3"></stop>
+                    <stop offset="50%" stop-color="black" stop-opacity="0.1"></stop>
+                    <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="gradient-2"
+                    cx="55"
+                    cy="20"
+                    fx="55"
+                    fy="20"
+                    r="30"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="white" stop-opacity="0.3"></stop>
+                    <stop offset="50%" stop-color="white" stop-opacity="0.1"></stop>
+                    <stop offset="100%" stop-color="white" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="gradient-3"
+                    cx="85"
+                    cy="50"
+                    fx="85"
+                    fy="50"
+                    xlink:href="#gradient-2"
+                  ></radialGradient>
+                  <radialGradient
+                    id="gradient-4"
+                    cx="50"
+                    cy="58"
+                    fx="50"
+                    fy="58"
+                    r="60"
+                    gradientTransform="translate(0 47) scale(1 0.2)"
+                    xlink:href="#gradient-3"
+                  ></radialGradient>
+                  <linearGradient
+                    id="gradient-5"
+                    x1="50"
+                    y1="90"
+                    x2="50"
+                    y2="10"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stop-color="black" stop-opacity="0.2"></stop>
+                    <stop offset="40%" stop-color="black" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <g>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-1)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="none"
+                    stroke="white"
+                    opacity="0.3"
+                    stroke-width="3"
+                    filter="url(#shine)"
+                    mask="url(#mask)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-2)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-3)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-4)"
+                  ></path>
+                  <path
+                    d="M63,37c-6.7-4-4-27-13-27s-6.3,23-13,27-27,4-27,13,20.3,9,27,13,4,27,13,27,6.3-23,13-27,27-4,27-13-20.3-9-27-13Z"
+                    fill="url(#gradient-5)"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="header-container"></div>
+
+    <div class="container">
+    
+        <section class="movie-container" id="movieContainer">
+        
+            <img src="#" alt="BG-Poster" id="BG-Poster">
+
+            <div class="movie-backdrop"></div>
+
+            <div class="movie-content">
+
+                <img
+                    id="moviePoster"
+                    class="movie-poster"
+                >
+
+                <div class="movie-details">
+
+                    <h1 id="movieTitle"></h1>
+
+                        <div class="descItem">
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/imdb.png" alt="imdb"/>
+                            <p id="rating"></p>
+                        </div>
+
+                    <h2>داستان فیلم</h2>
+
+                    <p id="moviePlot"></p>
+
+                    <div id="movieMeta" class="movie-meta">
+
+                        <h2>ژانر ها:</h2>
+                        
+                        <div class="genreContainer">
+
+                            <div class="genreWrapper">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+            <div class="movieData">
+                <div class="dataItem" id="runtime">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch-fill" viewBox="0 0 16 16"><path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584l.013-.012.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354-.012.012A6.97 6.97 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0"/></svg>
+                    <p>زمان: </p>
+                </div>
+                <div class="dataItem" id="release">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event-fill" viewBox="0 0 16 16"><path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/></svg>
+                    <p>اكران: </p>
+                </div>
+                
+                <div class="dataItem" id="country">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z"/></svg>
+                    <p>كشور سازنده: </p>
+                </div>
+                
+                <div class="dataItem" id="language">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16"><path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/><path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></svg>
+                    <p>زبان: </p>
+                </div>
+                
+                <div class="dataItem" id="rated">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/><path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+                    <p>رده سني: </p>
+                </div>
+            </div>
+
+        <section class="cast-section">
+
+            <div class="castWrapper">
+
+                <h2>بازیگران</h2>
+    
+                <div id="castContainer" class="cast-container" style="margin-right:  2rem;"></div>
+
+            </div>
+
+            <div class="directorWrapper">
+
+                <h2 style="margin-top: 3rem;">كارگردان</h2>
+                
+                <div id="directorContainer" class="director-container" style="margin-right:  2rem;"></div>
+            
+            </div>
+
+        </section>
+
+        <h2 class="stream-title" style="margin-right: 2rem; margin-top: 3rem;">تماشا :</h2>
+
+        <section class="actions-container">
+    
+            <div class="stream-box">
+
+                <div class="stream-item">
+                    <span style="color: white;">کیفیت :</span>
+                    <span style="color: #FFC700;">BluRay 720p</span>
+                </div>
+
+                <div class="stream-item">
+                    <span style="color: #979797;">انکودر :</span>
+                    <span style="color: white;">unknown</span>
+                </div>
+
+                <a id="watchBtn" class="stream-btn">مشاهده آنلاین</a>
+            
+            </div>
+
+            <section id="seriesSection" class="series-section" style="display:none;">
+                    
+                <h2>فصل ها و قسمت ها</h2>
+                    
+                <div id="seasonsContainer"></div>
+                    
+            </section>
+    
+        </section>
+
+        <section class="comments">
+
+            <h2>نظرات کاربران</h2>
+            
+            <textarea
+                id="commentInput"
+                placeholder="نظر خود را بنویسید..."
+            ></textarea>
+            
+            <button id="commentBtn">
+                ثبت نظر
+            </button>
+        
+            <div id="commentsList"></div>
+
+        </section>
+
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="../Js/auth.js"></script>
+    <script src="../Js/search.js"></script>
+    <script src="../Js/api.js"></script>
+    <script src="../Js/MovieLists.js"></script>
+    <script src="../Js/play.js"></script>
+    <script src="../Js/components.js"></script>
+
+</body>
+
+</html>

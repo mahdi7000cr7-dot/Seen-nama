@@ -1,0 +1,614 @@
+body{
+  margin:0;
+  font-family:tahoma;
+  background:#111;
+  color:#fff;
+}
+
+/* HEADER */
+*{
+  box-sizing: border-box;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f0f0f;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Timer... */
+input {
+  width: 100%;
+  margin: 20px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+.timer {
+  font-size: 13px;
+  color: #bbb;
+  margin: 10px 0;
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  color: #ff4d8d;
+  cursor: not-allowed;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.resend-btn.active {
+  cursor: pointer;
+  color: #ff0059;
+}
+input::placeholder {
+  color: #bbb;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ff0059, #ff4d8d);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.back {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* MOVIES GRID */
+.movies{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:20px;
+  padding:30px;
+}
+.new-movie{
+  border:2px solid #e50914;
+}
+
+.movie{
+  height:260px;
+  background-size:cover;
+  background-position:center;
+  border-radius:15px;
+  cursor:pointer;
+  display:flex;
+  align-items:flex-end;
+  padding:12px;
+  font-size:14px;
+  position:relative;
+}
+
+.movie::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.7),transparent);
+  border-radius:15px;
+}
+
+.movie span{
+  position:relative;
+  z-index:2;
+  font-weight:bold;
+}
+
+/* Featured */
+.featured-poster::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(0px);
+    transform: scale(1.02);
+}
+
+.featured-poster{
+    width:100%;
+    height:75vh;
+    border-radius:24px;
+    position:relative;
+    overflow:hidden;
+    background: #111;
+}
+
+.featured-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+
+    margin-right: 10rem;
+}
+
+#featuredPlayBtn{
+
+    width:80px;
+    height:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:50%;
+
+    background: white;
+
+    color:white;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+
+    opacity: 0.16;
+}
+
+#featuredPlayButton{
+  margin-right: -3.5rem;
+}
+
+.featured-item{
+
+    width:110px;
+    height:160px;
+
+    flex-shrink:0;
+
+    border-radius:12px;
+
+    background-size:cover;
+    background-position:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+#fuck > img{
+    width: 100%;
+    height: 100%;
+}
+
+#featured-content{
+    position:absolute;
+    bottom:25px;
+    /* right:25px; */
+    left:25px;
+    z-index:3;
+}
+
+#featured-content > .splide__arrows {
+    display: none;
+}
+
+#featuredTitle{
+    text-align: left;
+    margin: 8rem 0 20px 2rem;
+    font-size:2rem;
+    font-weight:700;
+    text-shadow:0 4px 20px rgba(0,0,0,.8);
+}
+
+.featured-slider{
+    display:flex;
+    justify-content: center;
+    margin-top:25px;
+    /* overflow-x:auto; */
+    scrollbar-width:none;
+    gap:15px;
+}
+
+.featured-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.featured-item{
+
+    width:130px;
+    height:190px;
+
+    flex-shrink:0;
+
+    border-radius:14px;
+
+    background-size:cover;
+    background-position:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.featured-item.active{
+
+    border:3px solid white;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 0 20px rgba(229,9,20,.4);
+}
+
+.featured-section{
+    padding:20px;
+}
+
+/* Movies */
+.content-row{
+    margin: 65px 0;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 30px;
+    margin-bottom:20px;
+}
+
+.section-header h2{
+    margin:0;
+    font-size:1.5rem;
+}
+
+.section-header a{
+    color: white;
+    text-decoration: none;
+    border: 0.08rem solid white;
+    padding: 0.5rem 1.6rem;
+    border-radius: 1.1rem;
+}
+
+.movie-slider{
+
+    display:flex;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    padding:0 30px 10px;
+
+    scroll-behavior:smooth;
+
+    scrollbar-width:none;
+}
+
+.movie-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.slider-card{
+
+    width:200px;
+
+    flex-shrink:0;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.slider-card:hover{
+    transform:translateY(-6px);
+}
+
+.slider-poster{
+
+    width:95%;
+    height:300px;
+
+    border-radius:16px;
+
+    background-size:cover;
+    background-position:center;
+}
+
+.slider-title{
+
+    margin-top:10px;
+
+    font-size:.95rem;
+
+    text-align:center;
+}
+
+@media (max-width:768px){
+
+    .slider-card{
+
+        width:140px;
+    }
+
+    .slider-poster{
+
+        height:210px;
+    }
+
+    .section-header{
+
+        padding:0 15px;
+    }
+
+    .movie-slider{
+
+        padding:0 15px 10px;
+    }
+
+}
+
+/* Add these styles to your featured.css */
+
+#featuredSlider {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#featuredSlider .splide__slide {
+    cursor: pointer;
+    transition: transform 0.25s ease, border 0.25s ease;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+#featuredSlider .splide__slide:hover {
+    transform: translateY(-6px);
+}
+
+#featuredSlider .splide__slide.active {
+    border: 3px solid white;
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+}
+
+#featuredSlider .splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Style Splide arrows */
+.splide__arrow {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    width: 40px;
+    height: 40px;
+}
+
+.splide__arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+.splide__arrow svg {
+    fill: white;
+}
+
+/* Make sure featured content is positioned correctly */
+#featured-content {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    z-index: 3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #featured-content {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }
+    
+    .splide__arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Fix for featured poster background */
+.featured-poster {
+    width: 100%;
+    height: 75vh;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#featuredTitle {
+    text-align: left;
+    margin: 8rem 0 20px 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 2;
+}
+
+/* Add these styles to your featured.css - replace the existing .slider-card styles */
+
+/* Default slider-card styles for movie sections */
+.slider-card {
+    width: 200px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: .25s;
+}
+
+/* Featured slider specific card sizes */
+#featuredSlider .slider-card {
+    width: 130px;  /* Smaller width for featured slider */
+    height: 190px; /* Fixed height for consistency */
+}
+
+/* Make images fill the cards properly */
+#featuredSlider .slider-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Responsive sizes for featured slider */
+@media (max-width: 1200px) {
+    #featuredSlider .slider-card {
+        width: 120px;
+        height: 175px;
+    }
+}
+
+@media (max-width: 992px) {
+    #featuredSlider .slider-card {
+        width: 110px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    #featuredSlider .slider-card {
+        width: 100px;
+        height: 145px;
+    }
+}
+
+@media (max-width: 480px) {
+    #featuredSlider .slider-card {
+        width: 85px;
+        height: 125px;
+    }
+}
+
+/* Keep original slider-card styles for movie sections */
+.content-row .slider-card {
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .content-row .slider-card {
+        width: 140px;
+    }
+}
+
+/* Featured slider specific styles */
+.featured-slide {
+    cursor: pointer;
+    transition: transform 0.25s ease, border 0.25s ease;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    width: 130px;  /* Fixed width */
+    flex-shrink: 0;
+}
+
+.featured-card {
+    width: 100%;
+    height: 190px;  /* Fixed height */
+    display: block;
+}
+
+.featured-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 14px;
+}
+
+.featured-slide:hover {
+    transform: translateY(-6px);
+}
+
+.featured-slide.active {
+    border: 3px solid white;
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+}
+
+.featured-slide.active .featured-card img {
+    border-radius: 11px;  /* Slightly smaller radius to account for border */
+}
+
+/* Responsive sizes for featured slides */
+@media (max-width: 1200px) {
+    .featured-slide {
+        width: 115px;
+    }
+    .featured-card {
+        height: 230px;
+    }
+}
+
+@media (max-width: 992px) {
+    .featured-slide {
+        width: 105px;
+    }
+    .featured-card {
+        height: 155px;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-slide {
+        width: 95px;
+    }
+    .featured-card {
+        height: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-slide {
+        width: 85px;
+    }
+    .featured-card {
+        height: 125px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-slide {
+        width: 75px;
+    }
+    .featured-card {
+        height: 250px;
+    }
+}
+
+/* Remove any conflicting styles */
+#featuredSlider {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    direction: ltr;
+}
+
+#featuredSlider .splide__slide {
+    max-width: 165px;
+    width: auto;
+}

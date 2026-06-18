@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Seenema</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+<link rel="stylesheet" href="Css/index.css">
+<link rel="stylesheet" href="Css/header.css">
+<link rel="stylesheet" href="Css/footer.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- Featured Title -->
+<section class="featured-section">
+
+    <div class="featured-poster" id="featuredPoster">
+
+        <div class="featured-overlay">
+
+            <button id="featuredPlayBtn"></button>
+            <svg id="featuredPlayButton" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16"><path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"/></svg>
+        </div>
+
+            <h1 id="featuredTitle"></h1>
+
+    <div class="splide" id="featured-content">
+
+        <div class="splide__track">
+
+            <ul class="splide__list" id="featuredSlider">
+            </ul>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+
+<!-- MOVIES -->
+<section class="content-row">
+
+    <div class="section-header">
+        <h2>فیلم‌های جدید</h2>
+        <a href="Components/list.html?type=movie">مشاهده همه</a>
+    </div>
+
+    <div class="splide" id="newMoviesSplide">
+
+        <div class="splide__track">
+
+            <ul class="splide__list" id="newMoviesSlider">
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="content-row">
+
+    <div class="section-header">
+        <h2>سریال های جدید</h2>
+        <a href="Components/list.html?type=series">مشاهده همه</a>
+    </div>
+
+    <div class="splide" id="newSeriesSplide">
+
+        <div class="splide__track">
+
+            <ul class="splide__list" id="newSeriesSlider">
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<div id="footer-container"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="Js/auth.js"></script>
+<script src="Js/search.js"></script>
+<script src="Js/api.js"></script>
+<script src="Js/MovieLists.js"></script>
+<script src="Js/index.js"></script>
+<script src="Js/featured.js"></script>
+<script src="Js/components.js"></script> 
+
+</body>
+</html>

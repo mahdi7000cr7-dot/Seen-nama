@@ -1,0 +1,64 @@
+body{
+  margin:0;
+  font-family:tahoma;
+  background:#111;
+  color:#fff;
+}
+
+/* HEADER */
+.header{
+  padding:15px 25px;
+  background:#0b0b0b;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#e50914;
+  cursor:pointer;
+}
+
+/* TITLE */
+.page-title{
+  padding:20px 30px 0;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* GRID */
+.movies{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:20px;
+  padding:30px;
+}
+
+.movie{
+  height:260px;
+  background-size:cover;
+  background-position:center;
+  border-radius:15px;
+  cursor:pointer;
+  display:flex;
+  align-items:flex-end;
+  padding:12px;
+  position:relative;
+}
+
+.movie::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.7),transparent);
+  border-radius:15px;
+}
+
+.movie span{
+  position:relative;
+  z-index:2;
+  font-weight:bold;
+  font-size:14px;
+}

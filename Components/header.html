@@ -1,0 +1,83 @@
+<header class="main-header">
+
+    <div class="header-right">
+
+        <a href="#"  class="logo">
+            SEENEMA
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="#" class="nav-link active" id="homeBTN">
+                خانه
+            </a>
+
+            <a class="movieList" href="#">
+                فیلم‌ها
+            </a>
+
+            <a class="seriesList" href="#">
+                سریال‌ها
+            </a>
+
+        </nav>
+
+    </div>
+
+    <div class="header-left">
+
+        <button class="header-btn search-btn" id="searchBtn">
+            <i class="bi bi-search"></i>
+        </button>
+
+        <div id="searchModal" class="search-modal">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="جستجو..."
+                >
+
+                <button id="closeSearchBtn">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <div id="searchResults"></div>
+
+            </div>
+
+        </div>
+
+        <div class="notification-wrapper">
+        
+            <button id="notificationBtn">
+                <i class="bi bi-bell"></i>
+                <span id="notificationBadge"></span>
+            </button>
+        
+            <div
+                id="notificationDropdown"
+                class="notification-dropdown"
+            ></div>
+        
+        </div>
+
+        <div class="profile-menu">
+        
+            <button id="profileBtn">
+                <i class="bi bi-person-circle"></i>
+            </button>
+        
+            <div
+                id="profileDropdown"
+                class="profile-dropdown"
+            >
+            </div>
+        
+        </div>
+
+    </div>
+
+</header>
